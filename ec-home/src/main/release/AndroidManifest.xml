@@ -1,2 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.herry.business" />
+    package="com.herry.business">
+
+    <application>
+        <activity android:name=".ui.HomeActivity"></activity>
+    </application>
+
+</manifest>
