@@ -1,16 +1,15 @@
 package com.herry.business;
 
-import com.herry.core.BasePresenter;
-import com.herry.core.BaseView;
+import com.herry.core.base.IBasePresenter;
+import com.herry.core.base.IBaseView;
 
 public interface HomeContract {
 
-    interface View extends BaseView<Presenter> {
+    interface View extends IBaseView {
         void showData();
-        void showEmpty();
     }
 
-    interface Presenter extends BasePresenter {
+    interface Presenter extends IBasePresenter {
         void loadData();
         void complete();
     }

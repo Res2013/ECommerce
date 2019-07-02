@@ -3,7 +3,7 @@
     package="com.herry.business">
 
     <application>
-        <activity android:name=".ui.HomeActivity"></activity>
+        <activity android:name=".ui.HomeMvpActivity"></activity>
     </application>
 
 </manifest>

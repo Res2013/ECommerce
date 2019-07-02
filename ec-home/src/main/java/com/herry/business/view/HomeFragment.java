@@ -1,10 +1,11 @@
 package com.herry.business.view;
 
-import android.support.v4.app.Fragment;
 
 import com.herry.business.HomeContract;
+import com.herry.core.base.BaseFragment;
+import com.herry.core.base.IBasePresenter;
 
-public class HomeFragment extends Fragment implements HomeContract.View {
+public class HomeFragment extends BaseFragment implements HomeContract.View {
 
     private HomeContract.Presenter mPresenter;
 
@@ -14,18 +15,23 @@ public class HomeFragment extends Fragment implements HomeContract.View {
     }
 
     @Override
-    public void showEmpty() {
-
-    }
-
-    @Override
     public void onPause() {
         super.onPause();
-        mPresenter.unsubscribe();
+        mPresenter.unSubscribe();
     }
 
     @Override
-    public void setPresenter(HomeContract.Presenter presenter) {
-        mPresenter = presenter;
+    public void setPresenter(IBasePresenter presenter) {
+        mPresenter = (HomeContract.Presenter) presenter;
+    }
+
+    @Override
+    public void onEmpty(Object tag) {
+
+    }
+
+    @Override
+    public void onError(Object tag, String errorMsg) {
+
     }
 }
