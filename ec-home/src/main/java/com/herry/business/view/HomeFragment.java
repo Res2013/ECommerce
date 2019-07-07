@@ -2,10 +2,10 @@ package com.herry.business.view;
 
 
 import com.herry.business.HomeContract;
-import com.herry.core.base.BaseFragment;
+import com.herry.core.base.BaseMvpFragment;
 import com.herry.core.base.IBasePresenter;
 
-public class HomeFragment extends BaseFragment implements HomeContract.View {
+public class HomeFragment extends BaseMvpFragment implements HomeContract.View {
 
     private HomeContract.Presenter mPresenter;
 
@@ -32,6 +32,21 @@ public class HomeFragment extends BaseFragment implements HomeContract.View {
 
     @Override
     public void onError(Object tag, String errorMsg) {
+
+    }
+
+    @Override
+    protected IBasePresenter createPresenter() {
+        return null;
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    protected void initView() {
 
     }
 }

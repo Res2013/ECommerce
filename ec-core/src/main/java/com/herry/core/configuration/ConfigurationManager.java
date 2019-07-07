@@ -4,6 +4,9 @@ import android.content.Context;
 
 import java.util.HashMap;
 
+/**
+ * @author Herry
+ */
 public class ConfigurationManager {
 
     public static Configurator init(Context context) {

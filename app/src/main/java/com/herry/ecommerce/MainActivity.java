@@ -3,7 +3,9 @@ package com.herry.ecommerce;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-
+/**
+ * @author Herry
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -4,6 +4,9 @@ import android.app.Application;
 
 import com.herry.core.configuration.ConfigurationManager;
 
+/**
+ * @author Herry
+ */
 public class MyApplication extends Application {
 
     @Override

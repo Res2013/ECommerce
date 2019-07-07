@@ -8,12 +8,25 @@ import com.herry.business.presenter.HomePresenter;
 import com.herry.core.base.BaseMvpActivity;
 import com.herry.core.base.IBasePresenter;
 
+/**
+ * @author Herry
+ */
 public class HomeMvpActivity extends BaseMvpActivity implements HomeContract.View {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    protected void initView() {
+
     }
 
     @Override
