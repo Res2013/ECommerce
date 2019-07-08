@@ -5,7 +5,7 @@ import com.herry.business.HomeContract;
 import com.herry.core.base.BaseMvpFragment;
 import com.herry.core.base.IBasePresenter;
 
-public class HomeFragment extends BaseMvpFragment implements HomeContract.View {
+public class HomeFragment extends BaseMvpFragment<HomeContract.Presenter> implements HomeContract.View {
 
     private HomeContract.Presenter mPresenter;
 
@@ -21,11 +21,6 @@ public class HomeFragment extends BaseMvpFragment implements HomeContract.View {
     }
 
     @Override
-    public void setPresenter(IBasePresenter presenter) {
-        mPresenter = (HomeContract.Presenter) presenter;
-    }
-
-    @Override
     public void onEmpty(Object tag) {
 
     }
@@ -36,7 +31,7 @@ public class HomeFragment extends BaseMvpFragment implements HomeContract.View {
     }
 
     @Override
-    protected IBasePresenter createPresenter() {
+    protected HomeContract.Presenter createPresenter() {
         return null;
     }
 

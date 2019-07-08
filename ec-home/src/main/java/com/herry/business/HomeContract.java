@@ -9,7 +9,7 @@ public interface HomeContract {
         void showData();
     }
 
-    interface Presenter extends IBasePresenter {
+    interface Presenter<V extends IBaseView> extends IBasePresenter<V> {
         void loadData();
         void complete();
     }

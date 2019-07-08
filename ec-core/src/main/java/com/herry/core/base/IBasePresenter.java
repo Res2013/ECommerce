@@ -1,12 +1,12 @@
 package com.herry.core.base;
 
-public interface IBasePresenter {
+public interface IBasePresenter<V> {
 
-    void attachView(IBaseView view);
+    void attachView(V view);
 
     void detachView();
 
-    IBaseView getView();
+    V getView();
 
     void subscribe();
 

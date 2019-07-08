@@ -13,6 +13,4 @@ public interface IBaseView {
     void onError(Object tag, String errorMsg);
 
     Context getContext();
-
-    void setPresenter(IBasePresenter presenter);
 }

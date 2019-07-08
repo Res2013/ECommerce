@@ -3,10 +3,11 @@ package com.herry.core.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-public abstract class BaseMvpFragment extends BaseFragment implements IBaseView {
+public abstract class BaseMvpFragment<P extends IBasePresenter> extends BaseFragment implements IBaseView {
 
-    protected IBasePresenter mPresenter;
+    protected P mPresenter;
 
+    @SuppressWarnings("unchecked")
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,5 +49,5 @@ public abstract class BaseMvpFragment extends BaseFragment implements IBaseView 
 
     }
 
-    protected abstract IBasePresenter createPresenter();
+    protected abstract P createPresenter();
 }

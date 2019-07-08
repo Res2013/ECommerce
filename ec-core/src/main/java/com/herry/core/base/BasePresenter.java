@@ -7,9 +7,9 @@ import java.lang.ref.WeakReference;
 
 import io.reactivex.disposables.CompositeDisposable;
 
-public abstract class BasePresenter implements IBasePresenter {
+public abstract class BasePresenter<V extends IBaseView> implements IBasePresenter<V> {
 
-    private Reference<IBaseView> mViewRef;
+    private Reference<V> mViewRef;
     private CompositeDisposable mCompositeDisposable;
 
     protected BasePresenter() {
@@ -17,12 +17,12 @@ public abstract class BasePresenter implements IBasePresenter {
     }
 
     @Override
-    public void attachView(IBaseView view) {
+    public void attachView(V view) {
         mViewRef = new WeakReference<>(view);
     }
 
     @Override
-    public IBaseView getView() {
+    public V getView() {
         return isViewAttached() ? mViewRef.get() : null;
     }
 
