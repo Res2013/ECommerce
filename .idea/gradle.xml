@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/ec-compiler" />
             <option value="$PROJECT_DIR$/ec-core" />
             <option value="$PROJECT_DIR$/ec-home" />
+            <option value="$PROJECT_DIR$/ec-ijkplayer" />
             <option value="$PROJECT_DIR$/ec-tinker" />
             <option value="$PROJECT_DIR$/ec-user" />
           </set>

@@ -1,25 +1,75 @@
 ext {
-
     android = [
             compileSdkVersion      : 28,
-            buildToolsVersion      : "28.0.0",
-            applicationId          : "com.will.weiyue",
-            minSdkVersion          : 19,
+            buildToolsVersion      : "28.0.3",
+            applicationId          : "com.herry.ecommerce",
+            minSdkVersion          : 17,
             targetSdkVersion       : 28,
             versionCode            : 1,
             versionName            : "1.0"
     ]
 
     dependVersion = [
-            support: "28.0.0-alpha3"
+            junitVersion            : "4.12",
+            runnerVersion           : "1.0.2",
+            espressoVersion         : "3.0.2",
+            support                 : "28.0.0",
+            constraint              : "1.1.3",
+            multidexVersion         : "1.0.3",
+            butterknifeVersion      : "8.8.1",
+            arouterApiVersion       : "1.4.0",
+            guava                   : "27.0.1-android",
+            rxjava                  : "2.1.16",
+            rxandroid               : "2.0.2",
+            iconify                 : "2.2.2",
+            retrofit                : "2.5.0",
+            adapter_rxjava2         : "2.4.0",
+            converter_gson          : "2.4.0",
+            exoplayer               : "r1.5.11",
+            immersionbar            : "2.3.2-beta05",
+            interceptor             : "3.10.0",
+            butterknife             : "8.8.1",
+            ijkplayer               : "0.8.8"
     ]
 
     dependencies = [
+            // unit
+            "junit"                 : "junit:junit:${dependVersion.junitVersion}",
+            // runner
+            "runner"                : "com.android.support.test:runner:${dependVersion.runnerVersion}",
+            // espresso
+            "espresso"              : "com.android.support.test.espresso:espresso-core:${dependVersion.espressoVersion}",
             // android-support
             "support-v4"            : "com.android.support:support-v4:${dependVersion.support}",
             "appcompat-v7"          : "com.android.support:appcompat-v7:${dependVersion.support}",
+            "support-preference"    : "com.android.support:preference-v7:${dependVersion.support}",
+            // constraint
+            "constraint"            : "com.android.support.constraint:constraint-layout:${dependVersion.constraint}",
             "design"                : "com.android.support:design:${dependVersion.support}",
             "recyclerview"          : "com.android.support:recyclerview-v7:${dependVersion.support}",
             "cardview"              : "com.android.support:cardview-v7:${dependVersion.support}",
+            //黄油刀
+            "butterknife_compiler"  : "com.jakewharton:butterknife-compiler:${dependVersion.butterknifeVersion}",
+            "butterknife"           : "com.jakewharton:butterknife:${dependVersion.butterknifeVersion}",
+            //路由
+            "arouter_api"           : "com.alibaba:arouter-api:${dependVersion.arouterApiVersion}",
+            "arouter_compiler"      : "com.alibaba:arouter-compiler:${dependVersion.arouterCompilerVersion}",
+            "arouter_annotation"    : "com.alibaba:arouter-annotation:${dependVersion.arouterannotationVersion}",
+            //方法数超过65535解决方法64K MultiDex分包方法
+            "multidex"              : "com.android.support:multidex:${dependVersion.multidexVersion}",
+            // guava
+            "guava"                 : "com.google.guava:guava:${dependVersion.guava}",
+            "rxjava"                : "io.reactivex.rxjava2:rxjava:${dependVersion.rxjava}",
+            "rxandroid"             : "io.reactivex.rxjava2:rxandroid:${dependVersion.rxandroid}",
+            "ionicons"              : "com.joanzapata.iconify:android-iconify-ionicons:${dependVersion.iconify}",
+            "fontawesome"           : "com.joanzapata.iconify:android-iconify-fontawesome:${dependVersion.iconify}",
+            "retrofit"              : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
+            "adapter-rxjava2"       : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.adapter_rxjava2}",
+            "converter-gson"        : "com.squareup.retrofit2:converter-gson:${dependVersion.converter_gson}",
+            "exoplayer"             : "com.google.android.exoplayer:exoplayer:${dependVersion.exoplayer}",
+            "immersionbar"          : "com.gyf.immersionbar:immersionbar:${dependVersion.immersionbar}",
+            "interceptor"           : "com.squareup.okhttp3:logging-interceptor:${dependVersion.interceptor}",
+            "ijkplayer-java"        : "tv.danmaku.ijk.media:ijkplayer-java:${dependVersion.ijkplayer}",
+            "ijkplayer-armv7a"      : "tv.danmaku.ijk.media:ijkplayer-armv7a:${dependVersion.ijkplayer}"
     ]
 }

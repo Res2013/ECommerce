@@ -1,1 +1,1 @@
-include ':app', ':ec-annotation', ':ec-compiler', ':ec-core', ':ec-home', ':ec-user', ':ec-tinker'
+include ':app', ':ec-annotation', ':ec-compiler', ':ec-core', ':ec-home', ':ec-user', ':ec-tinker', ':ec-ijkplayer'
