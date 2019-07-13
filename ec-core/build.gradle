@@ -63,9 +63,8 @@ dependencies {
     api("com.tencent.tinker:tinker-android-loader:${TINKER_VERSION}") { changing = true }
     // multi dex
     api rootProject.ext.dependencies["multidex"]
-    // exoplayer
-    api rootProject.ext.dependencies["exoplayer"]
     // ijkplayer
     api rootProject.ext.dependencies["ijkplayer-java"]
     api rootProject.ext.dependencies["ijkplayer-armv7a"]
+    api rootProject.ext.dependencies["ijkplayer-exo"]
 }

@@ -25,7 +25,6 @@ ext {
             retrofit                : "2.5.0",
             adapter_rxjava2         : "2.4.0",
             converter_gson          : "2.4.0",
-            exoplayer               : "r1.5.11",
             immersionbar            : "2.3.2-beta05",
             interceptor             : "3.10.0",
             butterknife             : "8.8.1",
@@ -66,10 +65,10 @@ ext {
             "retrofit"              : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
             "adapter-rxjava2"       : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.adapter_rxjava2}",
             "converter-gson"        : "com.squareup.retrofit2:converter-gson:${dependVersion.converter_gson}",
-            "exoplayer"             : "com.google.android.exoplayer:exoplayer:${dependVersion.exoplayer}",
             "immersionbar"          : "com.gyf.immersionbar:immersionbar:${dependVersion.immersionbar}",
             "interceptor"           : "com.squareup.okhttp3:logging-interceptor:${dependVersion.interceptor}",
             "ijkplayer-java"        : "tv.danmaku.ijk.media:ijkplayer-java:${dependVersion.ijkplayer}",
-            "ijkplayer-armv7a"      : "tv.danmaku.ijk.media:ijkplayer-armv7a:${dependVersion.ijkplayer}"
+            "ijkplayer-armv7a"      : "tv.danmaku.ijk.media:ijkplayer-armv7a:${dependVersion.ijkplayer}",
+            "ijkplayer-exo"         : "tv.danmaku.ijk.media:ijkplayer-exo:${dependVersion.ijkplayer}"
     ]
 }

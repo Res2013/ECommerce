@@ -48,9 +48,9 @@ import java.util.Map;
 
 import com.herry.ijkplayer.R;
 import com.herry.ijkplayer.Settings;
-import com.herry.ijkplayer.exo.IjkExoMediaPlayer;
 import com.herry.ijkplayer.services.MediaPlayerService;
 
+import tv.danmaku.ijk.media.exo.IjkExoMediaPlayer;
 import tv.danmaku.ijk.media.player.AndroidMediaPlayer;
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
