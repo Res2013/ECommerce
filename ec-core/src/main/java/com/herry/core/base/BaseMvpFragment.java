@@ -3,7 +3,7 @@ package com.herry.core.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-public abstract class BaseMvpFragment<P extends IBasePresenter> extends BaseFragment implements IBaseView {
+public abstract class BaseMvpFragment<P extends IBasePresenter> extends BaseFragment {
 
     protected P mPresenter;
 
@@ -23,30 +23,6 @@ public abstract class BaseMvpFragment<P extends IBasePresenter> extends BaseFrag
         if (mPresenter != null) {
             mPresenter.detachView();
         }
-    }
-
-    @Override
-    public void showLoading() {
-        if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
-            mLoadingDialog.show();
-        }
-    }
-
-    @Override
-    public void dismissLoading() {
-        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
-            mLoadingDialog.dismiss();
-        }
-    }
-
-    @Override
-    public void onEmpty(Object tag) {
-
-    }
-
-    @Override
-    public void onError(Object tag, String errorMsg) {
-
     }
 
     protected abstract P createPresenter();

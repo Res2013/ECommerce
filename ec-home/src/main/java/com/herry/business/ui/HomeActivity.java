@@ -10,17 +10,16 @@ import com.herry.core.base.BaseMvpActivity;
 /**
  * @author Herry
  */
-public class HomeMvpActivity extends BaseMvpActivity implements HomeContract.View {
+public class HomeActivity extends BaseMvpActivity<HomePresenter> implements HomeContract.View {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_layout);
     }
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.activity_home_layout;
     }
 
     @Override
@@ -35,16 +34,6 @@ public class HomeMvpActivity extends BaseMvpActivity implements HomeContract.Vie
 
     @Override
     public void showData() {
-
-    }
-
-    @Override
-    public void onEmpty(Object tag) {
-
-    }
-
-    @Override
-    public void onError(Object tag, String errorMsg) {
 
     }
 }

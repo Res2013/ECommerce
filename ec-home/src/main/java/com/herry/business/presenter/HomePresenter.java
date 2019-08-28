@@ -19,11 +19,6 @@ public class HomePresenter extends BasePresenter<HomeContract.View> implements H
     }
 
     @Override
-    public void subscribe() {
-        loadData();
-    }
-
-    @Override
     public void loadData() {
 
     }

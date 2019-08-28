@@ -1,13 +1,11 @@
 package com.herry.core.base;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.text.TextUtils;
 
-public abstract class BaseMvpActivity extends BaseActivity implements IBaseView {
+public abstract class BaseMvpActivity<P extends IBasePresenter> extends BaseActivity {
 
-    protected IBasePresenter mPresenter;
+    protected P mPresenter;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -27,31 +25,5 @@ public abstract class BaseMvpActivity extends BaseActivity implements IBaseView 
         }
     }
 
-    @Override
-    public void showLoading() {
-        showLoading("");
-    }
-
-    public void showLoading(String msg) {
-        if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
-            if (!TextUtils.isEmpty(msg)) {
-                mLoadingDialog.setTitleText(msg);
-            }
-            mLoadingDialog.show();
-        }
-    }
-
-    @Override
-    public void dismissLoading() {
-        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
-            mLoadingDialog.dismiss();
-        }
-    }
-
-    @Override
-    public Context getContext() {
-        return this;
-    }
-
-    protected abstract IBasePresenter createPresenter();
+    protected abstract P createPresenter();
 }

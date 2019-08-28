@@ -3,7 +3,6 @@ package com.herry.business.view;
 
 import com.herry.business.HomeContract;
 import com.herry.core.base.BaseMvpFragment;
-import com.herry.core.base.IBasePresenter;
 
 public class HomeFragment extends BaseMvpFragment<HomeContract.Presenter> implements HomeContract.View {
 
@@ -17,17 +16,6 @@ public class HomeFragment extends BaseMvpFragment<HomeContract.Presenter> implem
     @Override
     public void onPause() {
         super.onPause();
-        mPresenter.unSubscribe();
-    }
-
-    @Override
-    public void onEmpty(Object tag) {
-
-    }
-
-    @Override
-    public void onError(Object tag, String errorMsg) {
-
     }
 
     @Override

@@ -15,7 +15,7 @@ import com.herry.core.widget.LoadingDialog;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements IBaseView {
 
     private Unbinder mUnbinder;
     private View mRootView;
@@ -50,6 +50,18 @@ public abstract class BaseFragment extends Fragment {
         super.onDestroy();
         if (mUnbinder != null) {
             mUnbinder.unbind();
+        }
+    }
+
+    public void showLoading() {
+        if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
+            mLoadingDialog.show();
+        }
+    }
+
+    public void dismissLoading() {
+        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
+            mLoadingDialog.dismiss();
         }
     }
 

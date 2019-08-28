@@ -5,16 +5,11 @@ import android.content.Context;
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 
-import io.reactivex.disposables.CompositeDisposable;
-
 public abstract class BasePresenter<V extends IBaseView> implements IBasePresenter<V> {
 
     private Reference<V> mViewRef;
-    private CompositeDisposable mCompositeDisposable;
 
-    protected BasePresenter() {
-        mCompositeDisposable = new CompositeDisposable();
-    }
+    protected BasePresenter() {}
 
     @Override
     public void attachView(V view) {
@@ -39,13 +34,6 @@ public abstract class BasePresenter<V extends IBaseView> implements IBasePresent
         if (isViewAttached()) {
             mViewRef.clear();
             mViewRef = null;
-        }
-    }
-
-    @Override
-    public void unSubscribe() {
-        if (mCompositeDisposable != null) {
-            mCompositeDisposable.dispose();
         }
     }
 }

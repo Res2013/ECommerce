@@ -8,15 +8,17 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.WindowManager;
 
 import com.gyf.barlibrary.ImmersionBar;
+import com.herry.core.R;
 import com.herry.core.widget.LoadingDialog;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract  class BaseActivity extends AppCompatActivity {
+public abstract  class BaseActivity extends AppCompatActivity implements IBaseView {
     private Unbinder mUnbinder;
 //    private ViewStub mEmptyView;
     protected Context mContext;
@@ -28,12 +30,12 @@ public abstract  class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mContext = this;
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-        if (isActionBar()) {
+//        if (isActionBar()) {
 //            setContentView(R.layout.activity_base);
 //            ((ViewGroup) findViewById(R.id.fl_content)).addView(getLayoutInflater().inflate(getLayoutId(), null));
-        } else {
+//        } else {
             setContentView(getLayoutId());
-        }
+//        }
         //初始化ButterKnife
         mUnbinder = ButterKnife.bind(this);
 
@@ -76,6 +78,29 @@ public abstract  class BaseActivity extends AppCompatActivity {
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         initView();
+    }
+
+    protected void showLoading() {
+        showLoading(getContext().getResources().getString(R.string.loading));
+    }
+
+    protected void showLoading(String msg) {
+        if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
+            if (!TextUtils.isEmpty(msg)) {
+                mLoadingDialog.setTitleText(msg);
+            }
+            mLoadingDialog.show();
+        }
+    }
+
+    protected void dismissLoading() {
+        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
+            mLoadingDialog.dismiss();
+        }
+    }
+
+    public Context getContext() {
+        return this;
     }
 
     /**
